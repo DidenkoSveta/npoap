@@ -1,0 +1,32 @@
+body{
+   font-size: 16px;
+   font-family: "Montserrat";
+   font-weight: 400;
+   background-color: $gray;
+   color: $black;
+   line-height: 120%;
+}
+
+@media (max-width: 1440px){
+   body{
+      font-size: 14px;
+   }
+}
+
+@media (max-width: 1040px){
+   body{
+      font-size: 12px;
+   }
+}
+
+.container,
+.header__container,
+.header__contacts-container {
+   width: 100vw;
+   padding: 0px 10vw;
+   display: flex;
+}
+
+.container {
+   margin-bottom: 100px;
+}
