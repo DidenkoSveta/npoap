@@ -5,6 +5,9 @@
 
 .body__wrapper {
    background-image: url("../images/bg/promo-bg.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: top center;
    .header {
       background-color: transparent;
       .header__submenu::after {
@@ -170,6 +173,69 @@
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center center;
+}
+
+.promo {
+   &__container {
+      flex-direction: column;
+      gap: 45px;
+      margin-bottom: 0;
+   }
+   &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      max-width: 700px;
+      padding: 90px 0 230px;
+   }
+   &__subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      color: $white;
+      line-height: 130%;
+   }
+   &__slider {
+      display: flex;
+      overflow-x: hidden;
+      flex-wrap: nowrap;
+      margin: 0 auto;
+      gap: 2%;
+      width: 100%;
+      scroll-snap-type: start;
+      &-image {
+         scroll-snap-align: start;
+         flex: 0 0 auto;
+         flex-shrink: 0;
+         width: 32%;
+      }
+      &-container {
+         position: relative;
+         top: -120px;
+         background-image: url("../images/bg/promo-bg-line.svg");
+         background-size: 100% auto;
+         background-repeat: no-repeat;
+         background-position: center left;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+      }
+      &-wrapper {
+         width: 100%;
+         overflow-x: hidden;
+      }
+   }
+   &-icons {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      &-item {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         width: 305px;
+         font-weight: 500;
+      }
+   }
 }
 
 @import "mobile";
