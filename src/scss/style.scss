@@ -315,4 +315,96 @@
    }
 }
 
+.advantages {
+   &__container {
+      flex-direction: column;
+      gap: 40px;
+   }
+   &__list {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      width: 32%;
+      @include box-style;
+      background-color: $white;
+      padding: 30px;
+      gap: 16px;
+   }
+   &__info {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+   }
+   &__heading {
+      font-weight: 600;
+   }
+   &__description {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+   &__cooperation {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      &-item {
+         width: 32%;
+         @include box-style;
+         background-color: $white;
+         padding: 30px;
+      }
+      &-text::before{
+         content: "";
+         display: inline-block;
+         background-image: url("../images/icons/about-drop.svg");
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center center;
+         height: 14px;
+         width: 9px;
+         margin-right: 8px;
+      }
+   }
+   &__guarantee {
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 2px 6px 0 rgba(2, 84, 156, 0.1);
+      background: linear-gradient(233deg, rgba(215, 255, 173, 0.6) 3.5%, rgba(218, 245, 252, 0.6) 66%);
+      border-radius: 20px;
+      padding: 60px 50px;
+      border: 2px solid $light-blue;
+      align-items: center;
+      &-list {
+         display: flex;
+         width: 54%;
+         justify-content: space-between;
+      }
+      &-item {
+         max-width: 196px;
+         display: flex;
+         flex-direction: column;
+         gap: 14px;
+      }
+      &-text {
+         text-align: center;
+         color: $medium-blue;
+         font-weight: 500;
+      }
+      &-image {
+         height: 93px;
+      }
+   }
+   &__subtitle {
+      font-size: 28px;
+      color: $medium-blue;
+      font-weight: 500;
+      line-height: 120%;
+   }
+}
+
 @import "mobile";
