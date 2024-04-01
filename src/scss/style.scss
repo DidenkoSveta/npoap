@@ -359,7 +359,7 @@
          background-color: $white;
          padding: 30px;
       }
-      &-text::before{
+      &-text::before {
          content: "";
          display: inline-block;
          background-image: url("../images/icons/about-drop.svg");
@@ -405,6 +405,102 @@
       color: $medium-blue;
       font-weight: 500;
       line-height: 120%;
+   }
+}
+
+.home {
+   &__contacts {
+      &-wrapper {
+         justify-content: space-between;
+      }
+      &-card {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 30px;
+         position: relative;
+         width: 48%;
+         background-color: $white;
+         margin: 5px;
+         @include box-style;
+         padding: 70px 90px;
+         overflow: hidden;
+      }
+      &-address {
+         display: flex;
+         flex-direction: column;
+         font-size: 20px;
+         color: $black;
+         gap: 10px;
+      }
+   }
+   &__contact {
+      &-title {
+         font-size: 26px;
+      }
+      &-phone{
+         font-size: 26px;
+         font-weight: 500;
+         color: $black;
+         text-align: center;
+         line-height: 120%;
+      }
+      &-email,
+      &-address{
+         text-align: center;
+         color: $black;
+         line-height: 120%;
+         font-weight: 400;
+      }
+   }
+   &__form {
+      position: relative;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      width: 100%;
+      align-items: center;
+      &-field {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      &-title {
+         font-size: 26px;
+         color: $medium-blue;
+         position: relative;
+         z-index: 2;
+      }
+      &-image {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         z-index: 1;
+      }
+      &-input,
+      &-submit {
+         height: 60px;
+         width: 448px;
+      }
+      &-input {
+         text-align: center;
+         border: 1px solid $medium-blue;
+         color: $light-blue;
+      }
+      &-submit {
+         background-color: $medium-blue;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 18px;
+         color: $white;
+         transition: 0.3s ease-in-out;
+      }
+      &-submit:hover {
+         background-color: $light-blue;
+      }
    }
 }
 

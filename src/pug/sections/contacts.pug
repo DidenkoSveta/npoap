@@ -1,19 +1,20 @@
 section.home__contacts
    .home__contacts-wrapper.container
-      .home__form-card
+      .home__form-card.home__contacts-card
          h2.home__form-title Оставьте заявку
-            form.home__form(action="#" method="POST")
-               .home__form-field
-                  label.home__form-label(for="name") Ваше имя
-                  input.home__form-input(type="text" name="name" id="name" required)
-               .home__form-field
-                  label.home__form-label(for="phone") Телефон
-                  input.home__form-input(type="tel" name="phone" id="phone" required)
-               button.home__form-submit(type="submit") Отправить
+         form.home__form(action="#" method="POST")
+            .home__form-field
+               label.home__form-label(for="name") 
+               input.home__form-input(type="text" name="name" id="name" autocomplete="on" placeholder="Ваше имя" required)
+            .home__form-field
+               label.home__form-label(for="phone")
+               input.home__form-input(type="tel" name="phone" id="phone" autocomplete="on" placeholder="Телефон" required)
+            a.home__form-submit(type="submit") Отправить
+         img.home__form-image(src=require('../../images/img/contacts-bg.png') alt='Росток')
 
-      .home__contact-card
+      .home__contact-card.home__contacts-card
          h2.home__contact-title Контакты
-         address
+         address.home__contacts-address
             p.home__contact-address Воронежская область, с. Бабяково
             a.home__contact-email(href="mailto:agro-polimer@npoapr.ru") agro-polimer@npoapr.ru
             a.home__contact-phone(href="tel:+79896256040") +7 (989) 625 60 40
