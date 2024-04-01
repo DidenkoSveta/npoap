@@ -385,6 +385,9 @@
 @media (max-width: 768px) {
    .about {
       margin-top: -60px;
+      background-image: url("../images/bg/about-bg-line-mb.svg");
+      background-position: center calc(100% - 70px);
+
       &__wrapper {
          padding: 30px;
          gap: 20px;
@@ -543,6 +546,38 @@
       }
       &__description {
          gap: 8px;
+      }
+   }
+}
+@media (max-width: 490px) {
+   .advantages {
+      &__container {
+         gap: 12px;
+         align-items: center;
+      }
+      &__list {
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 12px;
+      }
+      &__item {
+         gap: 8px;
+      }
+      &__guarantee {
+         padding: 20px;
+         width: 100%;
+         gap: 20px;
+         &-list {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+         }
+      }
+      &__cooperation {
+         &-item {
+            padding: 15px 20px;
+         }
       }
    }
 }
