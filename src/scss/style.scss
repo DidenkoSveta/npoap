@@ -16,6 +16,7 @@
       &__nav-link {
          color: $white;
          transition: 0.2s ease-in-out;
+         font-size: 18px;
       }
       &__nav-link:hover {
          color: $light-blue;
@@ -77,10 +78,16 @@
       display: flex;
       justify-content: space-between;
       font-size: 14px;
+      background: linear-gradient(
+         252deg,
+         rgba(232, 247, 133, 0.5) 3.5%,
+         rgba(198, 241, 249, 0.5) 49.5%,
+         rgba(105, 204, 229, 0.5) 97.5%
+      );
       &-container {
          justify-content: flex-end;
          align-items: center;
-         margin: 16px 0 !important;
+         margin: 10px 0 !important;
       }
       &-lists {
          display: flex;
@@ -95,7 +102,7 @@
       }
       &-link {
          display: inline-block;
-         color: $blue;
+         color: $black;
          font-weight: 500;
          transition: 0.2s ease-in-out;
       }
@@ -218,6 +225,7 @@
          display: flex;
          flex-direction: column;
          gap: 20px;
+         overflow-x: hidden;
       }
       &-wrapper {
          width: 100%;
@@ -234,6 +242,75 @@
          gap: 12px;
          width: 305px;
          font-weight: 500;
+      }
+   }
+}
+
+.about {
+   width: 100vw;
+   overflow-x: hidden;
+   position: relative;
+   background-image: url("../images/bg/about-bg-line.svg");
+   background-size: 100% auto;
+   background-repeat: no-repeat;
+   background-position: bottom left;
+   display: flex;
+   flex-direction: column;
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+      background-color: $white;
+      @include box-style;
+      gap: 40px;
+      margin: 10px;
+   }
+   &__header {
+      width: 56%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+   }
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+   }
+   &__text {
+      font-weight: 600;
+   }
+   &__mission {
+      font-style: italic;
+      text-align: right;
+   }
+   &__video {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      &-frame {
+         width: 450px;
+         height: 250px;
+      }
+   }
+   &__info {
+      box-shadow: 0 2px 6px 0 rgba(2, 162, 221, 0.2);
+      background: #f8feff;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      padding: 30px;
+      border-radius: 14px;
+      &-text::before {
+         content: "";
+         display: inline-block;
+         background-image: url("../images/icons/about-drop.svg");
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center center;
+         height: 14px;
+         width: 9px;
+         margin-right: 8px;
       }
    }
 }

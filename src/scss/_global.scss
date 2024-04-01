@@ -1,20 +1,22 @@
-body{
+body {
    font-size: 16px;
    font-family: "Montserrat";
    font-weight: 400;
    background-color: $gray;
    color: $black;
    line-height: 130%;
+   width: 100vw;
+   overflow-x: hidden;
 }
 
-@media (max-width: 1440px){
-   body{
+@media (max-width: 1440px) {
+   body {
       font-size: 14px;
    }
 }
 
-@media (max-width: 1040px){
-   body{
+@media (max-width: 1040px) {
+   body {
       font-size: 12px;
    }
 }
@@ -29,35 +31,61 @@ body{
 }
 
 .container {
+   position: relative;
    margin-bottom: 100px;
+   overflow-x: hidden;
 }
-h1{
+h1 {
    font-size: 54px;
    line-height: 120%;
    color: $white;
    font-weight: 700;
 }
 
-@media (max-width: 1040px){
-   h1{
+@media (max-width: 1240px) {
+   h1 {
+      font-size: 46px;
+   }
+}
+
+@media (max-width: 1040px) {
+   h1 {
       font-size: 36px;
    }
 }
 
-@media (max-width: 490px){
-   h1{
-      font-size: 2.4em;
+@media (max-width: 490px) {
+   h1 {
+      font-size: 2.2em;
    }
 }
 
-@media (max-width: 390px){
-   h1{
-      font-size: 2.3em;
-   }
-}
-
-@media (max-width: 345px){
-   h1{
+@media (max-width: 345px) {
+   h1 {
       font-size: 2.1em;
+   }
+}
+
+.title{
+   font-size: 36px;
+   font-weight: 700;
+   line-height: 120%;
+}
+
+@media (max-width: 1240px){
+   .title{
+      font-size: 32px;
+   }
+}
+
+@media (max-width: 1040px){
+   .title{
+      font-size: 28px;
+   }
+}
+
+@media (max-width: 490px){
+   .title{
+      font-size: 22px;
    }
 }
