@@ -62,6 +62,11 @@ module.exports = {
       minify: false
     }),
     new HtmlWebpackPlugin({
+      template: './src/pug/pages/partners.pug',
+      filename: 'partners.html',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
       template: './src/pug/pages/privacy.pug',
       filename: 'privacy.html',
       minify: false
