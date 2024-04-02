@@ -409,6 +409,8 @@
 }
 
 .home {
+   width: 100vw;
+   overflow-x: hidden;
    &__contacts {
       &-wrapper {
          justify-content: space-between;
@@ -438,7 +440,7 @@
       &-title {
          font-size: 26px;
       }
-      &-phone{
+      &-phone {
          font-size: 26px;
          font-weight: 500;
          color: $black;
@@ -447,11 +449,11 @@
          transition: 0.2s ease-in-out;
       }
       &-email:hover,
-      &-phone:hover{
+      &-phone:hover {
          color: $medium-blue;
       }
       &-email,
-      &-address{
+      &-address {
          text-align: center;
          color: $black;
          line-height: 120%;
@@ -506,6 +508,36 @@
       }
       &-submit:hover {
          background-color: $light-blue;
+      }
+   }
+}
+
+.footer {
+   position: relative;
+   width: 100vw;
+   overflow-x: hidden;
+   background: linear-gradient(
+      252deg,
+      rgba(232, 247, 133, 0.5) 3.5%,
+      rgba(198, 241, 249, 0.5) 49.5%,
+      rgba(105, 204, 229, 0.5) 97.5%
+   );
+   background-size: cover;
+   background-repeat: no-repeat;
+   &__container {
+      flex-direction: column;
+      padding: 20px 0 10px;
+      font-weight: 400;
+      align-items: center;
+      display: flex;
+      gap: 8px;
+      p,
+      a {
+         text-align: center;
+         position: relative;
+      }
+      a {
+         text-decoration: underline;
       }
    }
 }

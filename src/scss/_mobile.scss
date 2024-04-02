@@ -53,6 +53,24 @@
    }
 }
 
+@media (max-width: 1240px) {
+   .container {
+      margin-bottom: 80px;
+   }
+}
+
+@media (max-width: 1040px) {
+   .container {
+      margin-bottom: 50px;
+   }
+}
+
+@media (max-width: 490px) {
+   .container {
+      margin-bottom: 30px;
+   }
+}
+
 @media (max-width: 1440px) {
    .header {
       &__nav {
@@ -689,6 +707,28 @@
             width: 100%;
             font-size: 12px;
          }
+         &-title {
+            font-size: 1.4em;
+         }
+      }
+      &__contact {
+         &-address,
+         &-email {
+            font-size: 0.7em;
+         }
+         &-title {
+            font-size: 1.4em;
+         }
+         &-phone {
+            font-size: 0.75em;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .footer {
+      &__container {
       }
    }
 }
