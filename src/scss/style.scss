@@ -787,4 +787,52 @@
    }
 }
 
+.partners {
+   margin-top: 40px;
+   width: 100vw;
+   &__container {
+      flex-direction: column;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+   }
+   &__item {
+      display: flex;
+      gap: 20px;
+      justify-content: space-evenly;
+      width: 100%;
+      background-color: $white;
+      padding: 40px 80px;
+      @include box-style;
+      margin-bottom: 10px;
+   }
+   &__item:nth-child(2n){
+      flex-direction: row-reverse;
+   }
+   &__info,
+   &__logo {
+      width: 50%;
+      display: flex;
+   }
+   &__logo {
+      align-items: center;
+      justify-content: center;
+   }
+   &__info{
+      flex-direction: column;
+      gap: 10px;
+   }
+   &__name{
+      color: $medium-blue;
+      font-size: 1.2em;
+   }
+}
+
 @import "mobile";

@@ -9,21 +9,22 @@ html(lang="ru")
       .page__wrapper
          include ../sections/header-contacts
          include ../sections/header
-section.certificates
-   .certificates__container.container
-      h2.certificates__title.title Сертификаты
-      p.certificates__description Вся наша продукция прошла испытания на соответствие требованиям и является сертифицированной.
-      .certificates__gallery
-         .certificates__item
-            .certificates__shadow
-            img.certificates__image(src=require('../../images/img/certificates/certificates-01.png') alt='Промо изображение 10')
-         .certificates__item
-            .certificates__shadow
-            img.certificates__image(src=require('../../images/img/certificates/certificates-02.png') alt='Промо изображение 10')
+      section.certificates
+         .certificates__container.container
+            h2.certificates__title.title Сертификаты
+            p.certificates__description Вся наша продукция прошла испытания на соответствие требованиям и является сертифицированной.
+            .certificates__gallery
+               .certificates__item
+                  .certificates__shadow
+                  img.certificates__image(src=require('../../images/img/certificates/certificates-01.png') alt='Промо изображение 10')
+               .certificates__item
+                  .certificates__shadow
+                  img.certificates__image(src=require('../../images/img/certificates/certificates-02.png') alt='Промо изображение 10')
 
-   .certificates__modal
-      .certificates__modal-content
-         span.certificates__close &times;
-         img.certificates__modal-img(src=require('../../images/img/certificates/certificates-01.png') alt='Промо изображение 10')
-      .certificates__modal-prev &larr;
-      .certificates__modal-next &rarr;
+         .certificates__modal
+            .certificates__modal-content
+               span.certificates__close &times;
+               img.certificates__modal-img(src=require('../../images/img/certificates/certificates-01.png') alt='Промо изображение 10')
+            .certificates__modal-prev &larr;
+            .certificates__modal-next &rarr;
+      include ../sections/footer
