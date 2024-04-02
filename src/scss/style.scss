@@ -444,6 +444,11 @@
          color: $black;
          text-align: center;
          line-height: 120%;
+         transition: 0.2s ease-in-out;
+      }
+      &-email:hover,
+      &-phone:hover{
+         color: $medium-blue;
       }
       &-email,
       &-address{
@@ -451,6 +456,7 @@
          color: $black;
          line-height: 120%;
          font-weight: 400;
+         transition: 0.2s ease-in-out;
       }
    }
    &__form {
