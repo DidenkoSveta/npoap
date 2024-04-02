@@ -103,6 +103,9 @@
       &__logo-link {
          padding: 10px 0;
       }
+      &__logo-link-mb {
+         display: block;
+      }
       &__nav {
          position: fixed;
          top: 0;
@@ -731,4 +734,8 @@
       &__container {
       }
    }
+}
+
+@media (max-width: 1040px){
+   
 }

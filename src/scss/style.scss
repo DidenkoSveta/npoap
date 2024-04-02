@@ -26,12 +26,29 @@
          li > a {
             color: $white;
             transition: 0.2s ease-in-out;
+            position: relative;
          }
 
          li:hover > a {
             color: $light-blue;
          }
       }
+   }
+   .header__nav-link::after,
+   .header__nav-underlink::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 0.1rem;
+      background-color: $light-blue;
+      transition: width 0.3s ease-in-out;
+   }
+
+   .header__nav-link:hover::after,
+   .header__nav-underlink:hover::after {
+      width: 100%;
    }
 }
 
@@ -42,7 +59,7 @@
    }
    &__logo-link {
       display: inline-block;
-      padding: 20px 0;
+      padding: 10px 0;
    }
    &__nav {
       position: relative;
@@ -65,9 +82,9 @@
       &-underlists {
          flex-direction: column;
          position: absolute;
-         padding: 30px 20px 20px !important;
+         padding: 20px 20px 20px !important;
          width: 200px;
-         top: 16px;
+         top: 22px;
          border-radius: 0 0 10px 10px;
          box-shadow: 0 2px 6px 0 rgba(2, 84, 156, 0.1);
          gap: 14px;
@@ -87,7 +104,7 @@
       &-container {
          justify-content: flex-end;
          align-items: center;
-         margin: 10px 0 !important;
+         margin: 18px 0 !important;
       }
       &-lists {
          display: flex;
@@ -526,7 +543,7 @@
    background-repeat: no-repeat;
    &__container {
       flex-direction: column;
-      padding: 20px 0 10px;
+      padding: 30px 0 20px;
       font-weight: 400;
       align-items: center;
       display: flex;
@@ -538,8 +555,124 @@
       }
       a {
          text-decoration: underline;
+         color: $black;
+         transition: 0.2s ease-in-out;
+      }
+      a:hover {
+         color: $medium-blue;
       }
    }
 }
 
+.page__wrapper {
+   .header {
+      background: linear-gradient(
+         252deg,
+         rgba(232, 247, 133, 0.5) 3.5%,
+         rgba(198, 241, 249, 0.5) 49.5%,
+         rgba(105, 204, 229, 0.5) 97.5%
+      );
+      &__contacts {
+         background: transparent;
+      }
+      &__nav {
+         &-link,
+         &-underlink {
+            position: relative;
+            color: $black;
+            font-weight: 500;
+            transition: 0.2s ease-in-out;
+            text-decoration: none;
+         }
+         &-link:hover,
+         &-underlink:hover {
+            color: $blue;
+         }
+         &-underlists {
+            background-color: $white;
+         }
+      }
+   }
+   .header__nav-link::after,
+   .header__nav-underlink::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 0.15rem;
+      background-color: $blue;
+      transition: width 0.3s ease-in-out;
+   }
+
+   .header__nav-link:hover::after,
+   .header__nav-underlink:hover::after {
+      width: 100%;
+   }
+}
+
+.contacts {
+   margin-top: 40px;
+   &__container {
+      flex-direction: column;
+      gap: 30px;
+   }
+   &__wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+   }
+   &__block {
+      width: 100%;
+      @include box-style;
+      background-color: $white;
+      padding: 40px;
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+      line-height: 130%;
+      gap: 8px;
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+   }
+   &__heading {
+      font-size: 18px;
+   }
+   &__title {
+      text-align: center;
+      color: $medium-blue;
+   }
+   &__address {
+      line-height: 130%;
+      span {
+         font-weight: 500;
+      }
+   }
+   &__phone,
+   &__email {
+      color: $medium-blue;
+      font-weight: 500;
+      font-size: 18px;
+      transition: color 0.2s ease-in-out;
+   }
+   &__phone:hover,
+   &__email:hover{
+      color: $blue;
+   }
+   &__details {
+      font-weight: 500;
+   }
+   &__map {
+      @include box-style;
+      background-color: $white;
+      iframe {
+         overflow: hidden;
+         border-radius: 20px;
+      }
+   }
+}
 @import "mobile";

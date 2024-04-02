@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title Производство капельных лент и трубок | НПО «АгроПолимер»
+      link(rel="shortcut icon" type="image/x-icon" href=require("../../images/icons/favicon.svg"))
+   body.body 
+      .page__wrapper
+         include ../sections/header-contacts
+         include ../sections/header
+         section.contacts
+            .contacts__container.container
+               h2.contacts__title.title Контакты
+               .contacts__wrapper 
+                  .contacts__block
+                     h3.contacts__heading Адрес
+                     p.contacts__address 
+                        span Производство: 
+                        |Индустриальный парк "Перспектива", Воронежская область, Новоусманский район, с. Бабяково, ул. Индустриальная, 61 «Г6»
+
+                  .contacts__block
+                     h3.contacts__heading Телефоны
+                     .contacts__item
+                        p.contacts__details Производство:
+                        a.contacts__phone(href="#") +7 (473) 206-52-82
+                     .contacts__item
+                        p.contacts__details Коммерческий отдел:
+                        a.contacts__phone(href="#") +7 (989) 625 60 40
+                        a.contacts__phone(href="#") +7 (910) 244 39 39
+                        a.contacts__phone(href="#") +7 (920) 468 68 64
+
+                  .contacts__block
+                     h3.contacts__heading Эл. почта:
+                     a.contacts__email agro-polimer@npoapr.ru
+
+               .contacts__map#map
+                  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5d63da0ff9cb93357e5d07aed59858aae460dd6341baf43a15c86a81a7a1bcbb&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+         
+         include ../sections/footer

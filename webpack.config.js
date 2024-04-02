@@ -52,6 +52,11 @@ module.exports = {
       minify: false
     }),
     new HtmlWebpackPlugin({
+      template: './src/pug/pages/contacts.pug',
+      filename: 'contacts.html',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
       template: './src/pug/pages/privacy.pug',
       filename: 'privacy.html',
       minify: false
@@ -66,7 +71,7 @@ module.exports = {
   optimization: {
     minimizer: [
       new CssMinimizerPlugin({
-        test: /\.min\.css$/i, 
+        test: /\.min\.css$/i,
       }),
       new TerserPlugin(),
     ],
