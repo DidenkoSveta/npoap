@@ -612,6 +612,7 @@
 }
 
 .contacts {
+   width: 100vw;
    margin-top: 40px;
    &__container {
       flex-direction: column;
@@ -640,7 +641,7 @@
       gap: 3px;
    }
    &__heading {
-      font-size: 18px;
+      font-size: 1.1em;
    }
    &__title {
       text-align: center;
@@ -656,7 +657,7 @@
    &__email {
       color: $medium-blue;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 1.1em;
       transition: color 0.2s ease-in-out;
    }
    &__phone:hover,
