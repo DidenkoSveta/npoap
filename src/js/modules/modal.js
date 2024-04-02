@@ -1,57 +1,65 @@
 import gsap from 'gsap';
 
 export default function modal() {
-  const modal = document.getElementById('modal');
-  const modalOverlay = document.getElementById('modalOverlay');
-  const closeModalButton = document.querySelector('.close-button');
-  const modalButtons = document.querySelectorAll('.modal-btn');
-  const enrollmentForm = document.getElementById('enrollmentForm');
-  const consentCheckbox = document.getElementById('consent');
+  const galleryItems = document.querySelectorAll('.certificates__item');
+  if (galleryItems.length > 0) {
+    const modal = document.querySelector('.certificates__modal');
+    if (modal) {
+      const modalImage = modal.querySelector('.certificates__modal-img');
+      const modalClose = modal.querySelector('.certificates__close');
+      const prevButton = modal.querySelector('.certificates__modal-prev');
+      const nextButton = modal.querySelector('.certificates__modal-next');
 
-  if (!modal || !modalOverlay) return; // Выход из функции, если элементы модального окна отсутствуют
+      let currentIndex = 0; // Текущий индекс отображаемого изображения
 
-  const toggleModal = (show) => {
-    gsap.to([modal, modalOverlay], { opacity: show ? 1 : 0, duration: 0.5, display: show ? 'block' : 'none' });
-  };
+      const openModal = index => {
+        const imgSrc = galleryItems[index].querySelector('img').getAttribute('src');
+        modalImage.setAttribute('src', imgSrc);
+        currentIndex = index;
+        modalImage.style.display = 'block'; // Устанавливаем изображение видимым
+        gsap.to(modal, { autoAlpha: 1, duration: 0.3 });
+      };
 
-  // Функция для отображения сообщения об успехе
-  const showSuccessMessage = () => {
-    const successMessage = document.createElement('div');
-    successMessage.className = 'success-message';
-    successMessage.textContent = 'Заявка отправлена!';
-    document.body.appendChild(successMessage);
-    gsap.to(successMessage, { opacity: 1, duration: 0.5 });
-
-    // Скрыть сообщение после 1 секунды
-    setTimeout(() => {
-      gsap.to(successMessage, {
-        opacity: 0,
-        duration: 0.5,
-        onComplete: () => document.body.removeChild(successMessage)
+      galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          openModal(index);
+        });
       });
-    }, 1000);
-  };
 
-  if (modalButtons) {
-    modalButtons.forEach(button => button.addEventListener('click', () => toggleModal(true)));
-  }
-  if (closeModalButton) {
-    closeModalButton.addEventListener('click', () => toggleModal(false));
-  }
-  if (modalOverlay) {
-    modalOverlay.addEventListener('click', () => toggleModal(false));
-  }
+      if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+          openModal(currentIndex);
+        });
 
-  if (enrollmentForm && consentCheckbox) {
-    enrollmentForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!consentCheckbox.checked) {
-        alert('Пожалуйста, подтвердите согласие на обработку данных.');
-        return;
+        nextButton.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % galleryItems.length;
+          openModal(currentIndex);
+        });
       }
-      showSuccessMessage();
-      toggleModal(false); // Закрытие модального окна
-      enrollmentForm.reset(); // Очистка формы
-    });
+
+      if (modalClose) {
+        modalClose.addEventListener('click', () => {
+          gsap.to(modal, { autoAlpha: 0, duration: 0.3, onComplete: () => {
+            modalImage.style.display = 'none'; // Скрываем изображение
+          }});
+        });
+      }
+
+      modal.addEventListener('click', event => {
+        if (event.target === modal) {
+          gsap.to(modal, { autoAlpha: 0, duration: 0.3, onComplete: () => {
+            modalImage.style.display = 'none'; // Скрываем изображение
+          }});
+        }
+      });
+
+      // Предотвращаем всплытие событий при клике на изображение внутри модального окна
+      if (modalImage) {
+        modalImage.addEventListener('click', event => {
+          event.stopPropagation();
+        });
+      }
+    }
   }
 }

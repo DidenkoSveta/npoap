@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title Производство капельных лент и трубок | НПО «АгроПолимер»
+      link(rel="shortcut icon" type="image/x-icon" href=require("../../images/icons/favicon.svg"))
+   body.body 
+      .page__wrapper
+         include ../sections/header-contacts
+         include ../sections/header
+section.certificates
+   .certificates__container.container
+      h2.certificates__title.title Сертификаты
+      p.certificates__description Вся наша продукция прошла испытания на соответствие требованиям и является сертифицированной.
+      .certificates__gallery
+         .certificates__item
+            .certificates__shadow
+            img.certificates__image(src=require('../../images/img/certificates/certificates-01.png') alt='Промо изображение 10')
+         .certificates__item
+            .certificates__shadow
+            img.certificates__image(src=require('../../images/img/certificates/certificates-02.png') alt='Промо изображение 10')
+
+   .certificates__modal
+      .certificates__modal-content
+         span.certificates__close &times;
+         img.certificates__modal-img(src=require('../../images/img/certificates/certificates-01.png') alt='Промо изображение 10')
+      .certificates__modal-prev &larr;
+      .certificates__modal-next &rarr;

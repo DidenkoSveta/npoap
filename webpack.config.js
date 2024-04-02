@@ -57,6 +57,11 @@ module.exports = {
       minify: false
     }),
     new HtmlWebpackPlugin({
+      template: './src/pug/pages/certificates.pug',
+      filename: 'certificates.html',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
       template: './src/pug/pages/privacy.pug',
       filename: 'privacy.html',
       minify: false
