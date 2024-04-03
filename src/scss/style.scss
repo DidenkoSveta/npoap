@@ -868,7 +868,7 @@
       display: flex;
       justify-content: space-between;
       gap: 40px;
-      &-card{
+      &-card {
          margin-top: 40px;
       }
    }
@@ -992,6 +992,100 @@
    }
    &__tube:nth-child(5)::before {
       background-image: url("../images/icons/products/products-item-06.svg");
+   }
+}
+
+.irrigation {
+   width: 100vw;
+   margin-top: 40px;
+   &__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+   }
+   &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      background-color: $white;
+      @include box-style;
+      width: 100%;
+      margin-bottom: 10px;
+      gap: 40px;
+   }
+   &__subtitle {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+   }
+   &__content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10%;
+   }
+   &__block {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   &__description {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f8feff;
+      color: $blue;
+      box-shadow: 0 0 4px 0 #daf5fc;
+   }
+   &__image {
+      max-width: 100%;
+      height: 100%;
+      &-block {
+         width: 50%;
+         max-height: 390px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 30px;
+      }
+   }
+   &__tech {
+      flex-direction: row-reverse;
+   }
+   &__additional {
+      font-weight: 600;
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      li {
+         list-style-type: circle;
+         position: relative;
+         left: 30px;
+         color: $blue;
+      }
+   }
+   &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background-color: #f8feff;
+      color: $blue;
+      box-shadow: 0 0 4px 0 #daf5fc;
+   }
+   &__text {
+      span {
+         width: 600px;
+      }
    }
 }
 
