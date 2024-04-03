@@ -984,6 +984,15 @@
          background-image: url("../images/icons/products/products-item-06.svg");
       }
    }
+   &__tube:nth-child(3)::before {
+      background-image: url("../images/icons/products/products-item-04.svg");
+   }
+   &__tube:nth-child(4)::before {
+      background-image: url("../images/icons/products/products-item-05.svg");
+   }
+   &__tube:nth-child(5)::before {
+      background-image: url("../images/icons/products/products-item-06.svg");
+   }
 }
 
 @import "mobile";

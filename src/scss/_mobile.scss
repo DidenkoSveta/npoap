@@ -972,3 +972,214 @@
       }
    }
 }
+
+@media (max-width: 1440px) {
+   .products__container {
+      gap: 30px;
+   }
+   .product {
+      &__item {
+         padding: 30px 40px;
+      }
+      &__image {
+         height: 250px;
+         img {
+            height: 100%;
+         }
+      }
+      &__specs {
+         gap: 14px;
+      }
+   }
+}
+
+@media (max-width: 1240px) {
+   .products__container {
+      gap: 20px;
+   }
+   .product {
+      margin-top: 30px;
+      &__item {
+         padding: 30px;
+      }
+      &__image {
+         max-height: 250px;
+         max-width: 200px;
+         img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+         }
+      }
+      &__specs {
+         gap: 14px;
+      }
+      &__descr {
+         width: 55%;
+         gap: 20px;
+      }
+      &__chart {
+         width: 55%;
+      }
+      &__body {
+         gap: 30px;
+      }
+   }
+}
+
+@media (max-width: 1040px) {
+   .products__container {
+      gap: 20px;
+   }
+   .products__lists {
+      gap: 14px;
+   }
+   .product {
+      margin-top: 30px;
+      &__item {
+         padding: 30px;
+      }
+      &__image {
+         max-height: 200px;
+         max-width: 180px;
+         img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+         }
+      }
+      &__specs {
+         gap: 4px;
+      }
+      &__descr {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 0;
+         width: 55%;
+      }
+      &__chart {
+         width: 55%;
+         &-card {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+         }
+      }
+      &__body {
+         gap: 20px;
+         align-items: flex-end;
+      }
+   }
+}
+
+@media (max-width: 640px) {
+   .products__container {
+      gap: 20px;
+   }
+   .products__lists {
+      gap: 5px;
+   }
+   .product {
+      margin-top: 20px;
+      &__name {
+         font-size: 1.4em;
+         &-span {
+            font-size: 1.4em;
+         }
+      }
+      &__item {
+         padding: 20px;
+      }
+      &__image {
+         max-height: 200px;
+         max-width: 180px;
+         img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+         }
+      }
+      &__specs {
+         gap: 4px;
+      }
+      &__descr {
+         flex-direction: row;
+         gap: 20px;
+         justify-content: space-around;
+         width: 100%;
+      }
+      &__chart {
+         width: 90%;
+         &-card {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+         }
+         &-block {
+            gap: 4px;
+         }
+      }
+      &__body {
+         gap: 10px;
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+}
+
+@media (max-width: 490px) {
+   .product {
+      &__name {
+         font-size: 1.3em;
+         text-align: center;
+         &-span {
+            font-size: 1.3em;
+            text-align: center;
+         }
+      }
+      &__item {
+         padding: 20px;
+         align-items: center;
+      }
+      &__image {
+         max-height: 180px;
+         max-width: 160px;
+         img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+         }
+      }
+      &__specs {
+         gap: 4px;
+      }
+      &__descr {
+         flex-direction: column;
+         gap: 0px;
+         justify-content: space-around;
+         align-items: center;
+         width: 100%;
+      }
+      &__chart {
+         width: 100%;
+         &-card {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+         }
+         &-block {
+            gap: 4px;
+         }
+         &-text {
+            padding: 20px;
+         }
+      }
+      &__body {
+         gap: 10px;
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+}
