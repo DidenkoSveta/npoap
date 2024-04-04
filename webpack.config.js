@@ -82,6 +82,11 @@ module.exports = {
       minify: false
     }),
     new HtmlWebpackPlugin({
+      template: './src/pug/pages/drip-tape.pug',
+      filename: 'drip-tape.html',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
       template: './src/pug/pages/privacy.pug',
       filename: 'privacy.html',
       minify: false

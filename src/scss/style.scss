@@ -1255,4 +1255,84 @@
    }
 }
 
+.drip-tape {
+   margin-top: 40px;
+   &__container {
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+   }
+   &__content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background-color: $white;
+      @include box-style;
+      margin-bottom: 10px;
+      padding: 50px;
+      gap: 40px;
+   }
+   &__description {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      h3 {
+         font-size: 1.4em;
+         margin-bottom: 20px;
+         line-height: 120%;
+      }
+   }
+   &__tech {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      h3 {
+         font-size: 1.4em;
+         margin-bottom: 20px;
+         line-height: 120%;
+      }
+      ul {
+         display: flex;
+         flex-direction: column;
+         max-width: 550px;
+         gap: 16px;
+         li{
+            display: flex;
+            align-items: center;
+         }
+         li::before {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: top center;
+            height: 26px;
+            width: 26px;
+            content: "";
+            position: relative;
+            display: inline-block;
+            margin-right: 8px;
+         }
+         li:nth-child(1)::before {
+            background-image: url("../images/icons/drip-tape/drip-tape-01.svg");
+         }
+         li:nth-child(2)::before {
+            background-image: url("../images/icons/drip-tape/drip-tape-02.svg");
+         }
+         li:nth-child(3)::before {
+            background-image: url("../images/icons/drip-tape/drip-tape-03.svg");
+         }
+         li:nth-child(4)::before {
+            background-image: url("../images/icons/drip-tape/drip-tape-04.svg");
+         }
+         li:nth-child(5)::before {
+            background-image: url("../images/icons/drip-tape/drip-tape-05.svg");
+         }
+         li:nth-child(6)::before {
+            background-image: url("../images/icons/drip-tape/drip-tape-06.svg");
+         }
+      }
+   }
+}
+
 @import "mobile";
