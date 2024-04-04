@@ -1282,7 +1282,7 @@
       &__grid {
          column-gap: 20px;
       }
-      &__container{
+      &__container {
          gap: 30px;
       }
    }
@@ -1298,8 +1298,60 @@
          gap: 10px;
          flex-direction: column;
       }
-      &__container{
+      &__container {
          gap: 20px;
+      }
+   }
+}
+
+@media (max-width: 1440px) {
+   .drip-about {
+      &__card {
+         gap: 5%;
+         align-items: center;
+      }
+      &__image-block {
+         width: 45%;
+      }
+   }
+}
+
+@media (max-width: 1240px) {
+   .drip-about {
+      &__card {
+         padding: 40px;
+      }
+   }
+}
+
+@media (max-width: 1040px) {
+   .drip-about {
+      &__card {
+         padding: 30px;
+         flex-direction: column;
+         gap: 30px;
+         align-items: flex-start;
+      }
+      &__text{
+         width: 100%;
+      }
+      &__image-block{
+         width: 400px;
+      }
+   }
+}
+
+@media (max-width: 490px) {
+   .drip-about {
+      &__card {
+         padding: 20px;
+         gap: 20px;
+      }
+      &__text{
+         width: 100%;
+      }
+      &__image-block{
+         width: 80%;
       }
    }
 }
