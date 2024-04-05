@@ -682,6 +682,10 @@
       flex-direction: column;
       align-items: center;
       gap: 30px;
+      background-image: url("../images/bg/product-bg-line.svg");
+      background-size: 100% 100%;
+      background-repeat: repeat-y;
+      background-position: center bottom;
    }
    &__description {
       font-size: 1.2em;
@@ -793,6 +797,10 @@
       gap: 40px;
       justify-content: center;
       align-items: center;
+      background-image: url("../images/bg/product-bg-line.svg");
+      background-size: 100% 50%;
+      background-repeat: repeat-y;
+      background-position: center bottom;
    }
    &__list {
       display: flex;
@@ -840,6 +848,11 @@
       gap: 40px;
       flex-direction: column;
       align-items: center;
+      background-image: url("../images/bg/product3-bg-line.svg"), url("../images/bg/product-bg-line.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position:
+         center 14%,
+         center 80%;
    }
    &__lists {
       display: flex;
@@ -1000,6 +1013,10 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
+      background-image: url("../images/bg/product2-bg-line.svg");
+      background-size: 100% 50%;
+      background-repeat: repeat-y;
+      background-position: bottom center;
    }
    &__card {
       display: flex;
@@ -1094,6 +1111,10 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
+      background-image: url("../images/bg/product-bg-line.svg");
+      background-size: 100% 100%;
+      background-repeat: repeat-y;
+      background-position: bottom center;
    }
    &__grid {
       display: flex;
@@ -1170,6 +1191,11 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
+      background-image: url("../images/bg/product3-bg-line.svg"), url("../images/bg/product-bg-line.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position:
+         center 10%,
+         center 80%;
    }
    &__card {
       display: flex;
@@ -1255,13 +1281,13 @@
 
 .drip-tape {
    margin-top: 40px;
-   // &-name {
-   //    background-color: #d0f0f8;
-   // }
    &__container {
       flex-direction: column;
       gap: 40px;
       align-items: center;
+      background-image: url("../images/bg/product3-bg-line.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
    }
    &__content {
       width: 100%;
