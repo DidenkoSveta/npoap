@@ -51,7 +51,9 @@
       width: 100%;
    }
 }
-
+// .header__submenu::after {
+//    color: #fff;
+// }
 .header {
    &__container {
       justify-content: space-between;
@@ -135,9 +137,11 @@
          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
          height: 24px;
          transition: 0.2s ease-in-out;
+         border: 1px solid transparent;
       }
       &-img:hover {
-         transform: scale(0.8);
+         transform: scale(1.1);
+         border: 1px solid $medium-blue;
       }
    }
    &__burger {
@@ -175,10 +179,12 @@
    padding-right: 0px;
    align-items: center;
    transition: 0.2s ease-in-out;
+   z-index: 100;
 }
 
 .header__nav-underlists {
    display: none;
+   z-index: 100;
 }
 
 .header__submenu:hover {
@@ -189,6 +195,7 @@
 
 .header__submenu::after {
    content: " \203A";
+   color: #fff;
    display: inline-block;
    position: absolute;
    transform: rotate(90deg);
@@ -208,7 +215,7 @@
    &__text {
       display: flex;
       flex-direction: column;
-      gap: 45px;
+      gap: 35px;
       max-width: 700px;
       padding: 90px 0 230px;
    }
@@ -395,7 +402,6 @@
       background: linear-gradient(233deg, rgba(215, 255, 173, 0.6) 3.5%, rgba(218, 245, 252, 0.6) 66%);
       border-radius: 20px;
       padding: 60px 50px;
-      border: 2px solid $light-blue;
       align-items: center;
       &-list {
          display: flex;
@@ -410,7 +416,7 @@
       }
       &-text {
          text-align: center;
-         color: $medium-blue;
+         color: $blue;
          font-weight: 500;
       }
       &-image {
@@ -419,7 +425,7 @@
    }
    &__subtitle {
       font-size: 28px;
-      color: $medium-blue;
+      color: $blue;
       font-weight: 500;
       line-height: 120%;
    }
@@ -467,7 +473,7 @@
       }
       &-email:hover,
       &-phone:hover {
-         color: $medium-blue;
+         color: $blue;
       }
       &-email,
       &-address {
@@ -566,30 +572,22 @@
 
 .page__wrapper {
    .header {
-      background: linear-gradient(
-         252deg,
-         rgba(232, 247, 133, 0.5) 3.5%,
-         rgba(198, 241, 249, 0.5) 49.5%,
-         rgba(105, 204, 229, 0.5) 97.5%
-      );
-      &__contacts {
-         background: transparent;
-      }
+      background-color: $blue;
       &__nav {
          &-link,
          &-underlink {
             position: relative;
-            color: $black;
+            color: $white;
             font-weight: 500;
             transition: 0.2s ease-in-out;
             text-decoration: none;
          }
          &-link:hover,
          &-underlink:hover {
-            color: $blue;
+            color: $yellow;
          }
          &-underlists {
-            background-color: $white;
+            background-color: $blue;
          }
       }
    }
@@ -601,7 +599,7 @@
       bottom: -5px;
       width: 0;
       height: 0.15rem;
-      background-color: $blue;
+      background-color: $yellow;
       transition: width 0.3s ease-in-out;
    }
 
@@ -1360,8 +1358,8 @@
       background-color: #d0f0f8;
    }
    &__cell:nth-child(5),
-   &__cell:nth-child(11){
-      background-color: #EDFFEC;
+   &__cell:nth-child(11) {
+      background-color: #edffec;
    }
 }
 .table {
@@ -1387,9 +1385,51 @@
    }
    &__row:nth-child(3),
    &__row:nth-child(4),
-   &__row:nth-child(2){
-      td:nth-last-child(-n+3){
-         background-color: #EDFFEC;
+   &__row:nth-child(2) {
+      td:nth-last-child(-n + 3) {
+         background-color: #edffec;
+      }
+   }
+}
+
+.privacy {
+   margin-top: 50px;
+   width: 100vw;
+   &__container {
+      flex-direction: column;
+      gap: 20px;
+   }
+   &__title {
+      font-size: 1.6em;
+      line-height: 120%;
+   }
+   &__list-main {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+   &__list-num {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+   }
+   &__list-child {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+   }
+   &__item {
+      font-weight: 400;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &-num {
+         font-weight: 600;
+         font-size: 20px;
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
       }
    }
 }

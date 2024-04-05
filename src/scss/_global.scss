@@ -7,6 +7,9 @@ body {
    line-height: 130%;
    width: 100vw;
    overflow-x: hidden;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   font-smooth: always;
 }
 
 @media (max-width: 1440px) {
@@ -43,8 +46,12 @@ a {
 h1 {
    font-size: 54px;
    line-height: 120%;
-   color: $white;
-   font-weight: 700;
+   // color: #e3eaf4;
+   background: linear-gradient(233deg, #e8f785 3.5%, #fff 89.1%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-weight: 600;
 }
 
 @media (max-width: 1240px) {
@@ -73,8 +80,15 @@ h1 {
 
 .title {
    font-size: 36px;
-   font-weight: 700;
    line-height: 120%;
+   font-family: "Neuropol", "Montserrat", sans-serif;
+   z-index: 1;
+   font-weight: 500;
+   text-stroke: none;
+   color: $medium-blue;
+   letter-spacing: 0.04em;
+   text-stroke: 1px $medium-blue;
+   -webkit-text-stroke: 1px $medium-blue;
 }
 
 @media (max-width: 1240px) {
