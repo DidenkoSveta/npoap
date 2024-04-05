@@ -1,11 +1,73 @@
-      .drip-tape__table-container
-      table.drip-tape__table
+.drip-tape__table-container.container
+   table.drip-tape__table
       thead.drip-tape__thead
-      tr.drip-tape__head-row
-      th.drip-tape__header Интервал эмиттера, см
-      th.drip-tape__header Уклон
+         tr.drip-tape__head-row
+            th.drip-tape__header(rowspan="4") Интервал эмиттера, см
+            th.drip-tape__header(colspan="7") Максимальная длина, м при равномерности полива 90%
+            th.drip-tape__header(colspan="5") Максимальная длина, м при уклоне 0%
+         tr.drip-tape__head-row
+            th.drip-tape__header(colspan="7") (давление 1,0 бар)
+            th.drip-tape__header(colspan="5")(rowspan="2") Равномерность полива
+         tr.drip-tape__head-row
+            th.drip-tape__subheader(colspan="7") Уклон
+         tr.drip-tape__row
+            th.drip-tape__subheader 3%
+            th.drip-tape__subheader 2%
+            th.drip-tape__subheader 1%
+            th.drip-tape__subheader 0%
+            th.drip-tape__subheader -1%
+            th.drip-tape__subheader -2%
+            th.drip-tape__subheader -3%
+            th.drip-tape__subheader 95%
+            th.drip-tape__subheader 92,5%
+            th.drip-tape__subheader 90%
+            th.drip-tape__subheader 85%
+            th.drip-tape__subheader 80%
 
       tbody.drip-tape__tbody
-      tr.drip-tape__data-row
-      td.drip-tape__data 10
-      td.drip-tape__data 56
+         tr.drip-tape__row
+            td.drip-tape__cell.drip-tape-name 10
+            td.drip-tape__cell 56
+            td.drip-tape__cell 60
+            td.drip-tape__cell 66
+            td.drip-tape__cell 74
+            td.drip-tape__cell 82
+            td.drip-tape__cell 87
+            td.drip-tape__cell 91
+            td.drip-tape__cell 46
+            td.drip-tape__cell 63
+            td.drip-tape__cell 74
+            td.drip-tape__cell 81
+            td.drip-tape__cell 81
+
+      tbody.drip-tape__tbody
+         tr.drip-tape__row
+            td.drip-tape__cell.drip-tape-name 10
+            td.drip-tape__cell 56
+            td.drip-tape__cell 60
+            td.drip-tape__cell 66
+            td.drip-tape__cell 74
+            td.drip-tape__cell 82
+            td.drip-tape__cell 87
+            td.drip-tape__cell 91
+            td.drip-tape__cell 46
+            td.drip-tape__cell 63
+            td.drip-tape__cell 74
+            td.drip-tape__cell 81
+            td.drip-tape__cell 81
+
+      tbody.drip-tape__tbody
+         tr.drip-tape__row
+            td.drip-tape__cell.drip-tape-name 10
+            td.drip-tape__cell 56
+            td.drip-tape__cell 60
+            td.drip-tape__cell 66
+            td.drip-tape__cell 74
+            td.drip-tape__cell 82
+            td.drip-tape__cell 87
+            td.drip-tape__cell 91
+            td.drip-tape__cell 46
+            td.drip-tape__cell 63
+            td.drip-tape__cell 74
+            td.drip-tape__cell 81
+            td.drip-tape__cell 81

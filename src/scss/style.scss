@@ -1257,6 +1257,9 @@
 
 .drip-tape {
    margin-top: 40px;
+   // &-name {
+   //    background-color: #d0f0f8;
+   // }
    &__container {
       flex-direction: column;
       gap: 40px;
@@ -1298,7 +1301,7 @@
          flex-direction: column;
          max-width: 550px;
          gap: 16px;
-         li{
+         li {
             display: flex;
             align-items: center;
          }
@@ -1333,6 +1336,61 @@
          }
       }
    }
+   &__table {
+      width: 100%;
+      border-collapse: collapse;
+      unicode-bidi: isolate;
+      border-spacing: 0px;
+      tr,
+      td,
+      th {
+         font-weight: 500;
+         padding: 10px 20px;
+         border: 1px solid #8ad9ec;
+         text-align: center;
+      }
+   }
+   &__thead {
+      background-color: #d0f0f8;
+   }
+   &__tbody {
+      background-color: $white;
+   }
+   &__cell:nth-child(1) {
+      background-color: #d0f0f8;
+   }
+   &__cell:nth-child(5),
+   &__cell:nth-child(11){
+      background-color: #EDFFEC;
+   }
 }
-
+.table {
+   &-drip-specs {
+      width: 100%;
+      border-collapse: collapse;
+      unicode-bidi: isolate;
+      border-spacing: 0px;
+      tr,
+      td,
+      th {
+         font-weight: 500;
+         padding: 14px 30px;
+         border: 1px solid #8ad9ec;
+         text-align: left;
+      }
+   }
+   &__head {
+      background-color: #d0f0f8;
+   }
+   &__data-name {
+      background-color: #d0f0f8;
+   }
+   &__row:nth-child(3),
+   &__row:nth-child(4),
+   &__row:nth-child(2){
+      td:nth-last-child(-n+3){
+         background-color: #EDFFEC;
+      }
+   }
+}
 @import "mobile";

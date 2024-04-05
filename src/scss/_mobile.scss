@@ -1452,6 +1452,27 @@
    }
 }
 
+@media (max-width: 1040px) {
+   .drip-tape {
+      &__table {
+         tr,
+         td,
+         th {
+            padding: 10px 10px;
+         }
+      }
+      
+   }
+   .table {
+      &-drip-specs {
+         tr,
+         td,
+         th {
+            padding: 14px;
+         }
+      }
+   }
+}
 
 @media (max-width: 768px) {
    .drip-tape {
@@ -1481,8 +1502,27 @@
             margin-bottom: 6px;
             font-size: 1.2em;
          }
-         ul{
+         ul {
             gap: 8px;
+         }
+      }
+      &__table-container {
+         overflow-x: auto;
+      }
+      &__table {
+         width: 730px;
+         overflow-x: auto;
+      }
+   }
+   .table {
+      &-drip-specs {
+         width: 730px;
+         overflow-x: auto;
+         tr,
+         td,
+         th {
+            padding: 14px;
+            min-width: 140px;
          }
       }
    }
